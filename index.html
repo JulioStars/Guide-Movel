@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu imóvel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+</head>
+<body>
+    <header>
+        <h1>IMÓVEL GUIDE</h1>
+        <nav class="container">
+            <div class="nav-one">
+                <ul>
+                    <li>
+                        <a href="#">Condomínios</a>
+                    </li>
+                    <li>
+                        <a href="#">Fórum</a>
+                    </li>
+                    <li>
+                        <a href="#">Guia</a>
+                    </li>
+                    <li>
+                        <a href="#">Artigos</a>
+                    </li>
+                    <li>
+                        <a href="#">Ferramentas</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-two">
+                <ul>
+                    <li>
+                        <a href="#">Cotar imóvel</a>
+                    </li>
+                    <li>
+                        <a href="#">Planos</a>
+                    </li>
+                    <li>
+                        <a href="#">Entrar</a>
+                    </li>
+                </ul>
+                <button type="button">CADASTRE-SE</button>
+            </div>
+        </nav>
+        <div class="menu-hamburguer">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <main>
+        <div class="brokers">
+            <div class="broker">
+                <img id="imageBack" src="https://img.freepik.com/free-photo/portrait-businessman-smiling_23-2150771049.jpg?t=st=1708286588~exp=1708290188~hmac=29c9e96b2b65df4df87f2aa638ed98895e6b8be8ef2091d03379dced5b36f36b&w=1380" alt="">
+                <img id="imageFront" src="https://img.freepik.com/free-photo/portrait-businessman-smiling_23-2150771049.jpg?t=st=1708286588~exp=1708290188~hmac=29c9e96b2b65df4df87f2aa638ed98895e6b8be8ef2091d03379dced5b36f36b&w=1380">
+                <div class="broker-details">
+                    <h2>Caio Santos</h2>
+                    <p>3.000 pontos</p>
+                    <button class="phone-view" type="button">Ver telefone</button>
+                    <div class="phone-broker hidden">(11) 98576-3340</div>
+                </div>
+            </div>
+            <div class="broker">
+                <img id="imageBack" src="https://img.freepik.com/free-photo/portrait-businessman-smiling_23-2150771047.jpg?t=st=1708301908~exp=1708305508~hmac=e4ac0b81f49607471933b4908233e7d47c5facaf81a35af1032aa1aca67de24f&w=1380">
+                <img id="imageFront" src="https://img.freepik.com/free-photo/portrait-businessman-smiling_23-2150771047.jpg?t=st=1708301908~exp=1708305508~hmac=e4ac0b81f49607471933b4908233e7d47c5facaf81a35af1032aa1aca67de24f&w=1380">
+                <div class="broker-details">
+                    <h2>Pedro Gomes</h2>
+                    <p>1.250 pontos</p>
+                    <button class="phone-view" type="button">Ver telefone</button>
+                    <div class="phone-broker hidden">(11) 93478-8859</div>
+                </div>
+            </div>
+        </div>
+        <div class="send-message">
+            <h1>Mande uma mensagem:</h1>
+            <form>
+                <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF">
+                <input type="tel" name="phone" id="phone" placeholder="Digite seu telefone">
+                <textarea name="message" id="message" placeholder="Digite o assunto"></textarea>
+                <button id="submitForm" type="submit">Enviar Mensagem</button>
+            </form>
+        </div>
+        <div class="rule-3">
+            <h1>Regra de 3</h1>
+            <div class="calculate">
+                <input type="number" id="value1" placeholder="valor 1">
+                <span></span>
+                <input type="number" id="value2" placeholder="valor 2">
+                <input type="number" id="value3"  placeholder="valor 3">
+                <span></span>
+                <input type="number" id="result" disabled>
+            </div>
+            <button id="valueCalculate" type="button">Calcular</button>
+        </div>
+        <div class="modal-image">
+            <img src="https://img.freepik.com/free-photo/luxury-pool-villa-spectacular-contemporary-design-digital-art-real-estate-home-house-property-ge_1258-150749.jpg?w=1380&t=st=1708286661~exp=1708287261~hmac=8f6f61139d36f452dc961f31a0f5f920c99b301117e333fcf055017ef8bc57fc" alt="">
+            <button id="openModal" type="button">ABRIR IMAGEM NO MODAL</button>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="box-close">
+                    <span></span>
+                    <span class="close">×</span>
+                </div>
+                <img id="modalImage" src="https://img.freepik.com/free-photo/luxury-pool-villa-spectacular-contemporary-design-digital-art-real-estate-home-house-property-ge_1258-150749.jpg?w=1380&t=st=1708286661~exp=1708287261~hmac=8f6f61139d36f452dc961f31a0f5f920c99b301117e333fcf055017ef8bc57fc" alt="Imagem do Modal">
+            </div>
+        </div>
+        <div class="download-imovel-guide">
+            <a class="download" href="https://img.freepik.com/free-photo/luxury-pool-villa-spectacular-contemporary-design-digital-art-real-estate-home-house-property-ge_1258-150749.jpg?w=1380&t=st=1708286661~exp=1708287261~hmac=8f6f61139d36f452dc961f31a0f5f920c99b301117e333fcf055017ef8bc57fc" download>
+                <img src="https://img.freepik.com/free-photo/luxury-pool-villa-spectacular-contemporary-design-digital-art-real-estate-home-house-property-ge_1258-150749.jpg?w=1380&t=st=1708286661~exp=1708287261~hmac=8f6f61139d36f452dc961f31a0f5f920c99b301117e333fcf055017ef8bc57fc">
+            </a>
+            <button type="button" id="download">Download</button>
+        </div>
+        <div class="image-effect">
+            <img src="https://img.freepik.com/free-photo/luxury-pool-villa-spectacular-contemporary-design-digital-art-real-estate-home-house-property-ge_1258-150749.jpg?w=1380&t=st=1708286661~exp=1708287261~hmac=8f6f61139d36f452dc961f31a0f5f920c99b301117e333fcf055017ef8bc57fc" alt="">
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <div class="nav-one">
+                <ul>
+                    <li>
+                        <a href="#">Termos</a>
+                    </li>
+                    <li>
+                        <a href="#">Contatos</a>
+                    </li>
+                    <li>
+                        <a href="#">Sobre</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-two">
+                <span>&copy;Copyright 2022. Todos os direitos reservados.</span>
+                <h1>IMÓVEL GUIDE</h1>
+            </div>
+        </nav>
+    </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/messages_pt_BR.min.js"></script>
+    <script src="./js/html2canvas.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

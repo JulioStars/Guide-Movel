@@ -1,0 +1,1708 @@
+:root {
+    --orange: #FE6613;
+    --orange-rover: #da5711;
+    --blue: #1B2653;
+    --grey: #787878;
+    --white: #ffffff;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+input, button, textarea {
+    font-family: "Roboto", sans-serif;
+}
+
+header, footer {
+    background-color: var(--blue);
+}
+
+header {
+    padding: 1rem 5.625rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    color: var(--white);
+}
+
+header nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .nav-one {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    margin-right: 5rem;
+    width: 5rem;
+}
+
+header .nav-one ul {
+    display: flex;
+    gap: 2rem;
+}
+
+header .nav-one li {
+    list-style: none;
+}
+
+header .nav-one li a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+}
+
+header .nav-two {
+    display: flex;
+    align-items: center;
+}
+
+header .nav-two button {
+    margin-left: 5rem;
+    height: 3rem;
+    width: 10rem;
+    background: transparent;
+    border: 2px solid var(--white);
+    border-radius: 100px;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+header .nav-two button:hover {
+    background: var(--white);
+    color: var(--blue);
+}
+
+header .nav-two ul {
+    display: flex;
+    gap: 2rem;
+}
+
+header .nav-two li {
+    list-style: none;
+}
+
+header .nav-two li a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+}
+
+main {
+    padding: 6rem 5.625rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    column-gap: 10rem;
+    row-gap: 5rem;
+}
+
+.brokers {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    border: 1px solid black;
+    padding: .5rem .5rem;
+    border-radius: 4px;
+}
+
+.broker {
+    display: flex;
+    align-items: center;
+}
+
+.broker img {
+    border: 2px solid grey;
+    width: 13rem;
+    height: 11rem;
+    border-radius: 8px;
+    margin-right: .5rem;
+}
+
+.broker-details {
+    margin: -8rem;
+}
+
+#imageBack {
+    width: 13rem;
+    height: 11rem;
+    filter: blur(2px);
+    z-index: 1;
+}
+
+#imageFront {
+    background-size: 1rem 100rem;
+    position: relative;
+    left: -11rem;
+    width: 8rem;
+    z-index: 2;
+}
+
+.broker h2 {
+    color: var(--blue);
+    font-weight: 500;
+}
+
+.broker p {
+    color: var(--blue);
+    margin-top: .2rem;
+    margin-bottom: .1rem;
+}
+
+.broker button {
+    color: var(--orange);
+    text-decoration: dashed;
+    border: none;
+    border-bottom: 1px solid var(--orange);
+    font-size: 1rem;
+    background: transparent;
+    cursor: pointer;
+}
+
+.broker button:hover {
+    color: var(--orange-rover);
+}
+
+.broker .phone-broker {
+    margin-top: 1rem;
+    background: var(--blue);
+    color: var(--white);
+    font-weight: 700;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    padding: .5rem .3rem;
+}
+
+.broker-details .hidden {
+    display: none;
+}
+
+.send-message {
+    padding: 0 1.5rem;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.send-message h1 {
+    color: var(--blue);
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.25rem;
+    font-weight: 500;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form input {
+    height: 2.5rem;
+    padding: 0 .5rem;
+    border-radius: 6px;
+    border: 1px solid black;
+    font-size: 1rem;
+}
+
+form textarea {
+    height: 4.5rem;
+    padding: .6rem .5rem;
+    border-radius: 6px;
+    border: 1px solid black;
+    font-size: 1rem;
+    resize: none;
+}
+
+form input:focus {
+    outline: 2px solid var(--orange);
+    border: none;
+}
+
+form textarea:focus {
+    outline: 2px solid var(--orange);
+    border: none;
+}
+
+form button {
+    max-width: 12rem;
+    border: none;
+    border-radius: 5px;
+    padding: .25rem .5rem;
+    background-color: var(--orange);
+    color: var(--white);
+    font-weight: 400;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: var(--orange-rover);
+}
+
+#cpf-error,
+#phone-error,
+#message-error {
+    font-weight: 700;
+    margin-top: -.5rem;
+}
+
+.rule-3 {
+    padding: 0rem 1.5rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rule-3 h1 {
+    color: var(--blue);
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    font-weight: 500;
+}
+
+.rule-3 input {
+    height: 2.5rem;
+    padding: 0 .5rem;
+    border-radius: 6px;
+    border: 1px solid black;
+    font-size: 1rem;
+}
+
+.rule-3 input:focus {
+    outline: 2px solid var(--orange);
+    border: none;
+}
+
+.calculate {
+    display: grid;
+    grid-template-columns: 40% 10% 40%;
+    column-gap: 5%;
+    align-items: center;
+    row-gap: 1.8rem;
+}
+
+.calculate span {
+    border: 1px solid black;
+}
+
+.calculate #result {
+    border: 2px solid var(--orange);
+}
+
+.rule-3 button {
+    max-width: 8rem;
+    border: none;
+    border-radius: 5px;
+    padding: .25rem .5rem;
+    background-color: var(--orange);
+    color: var(--white);
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    cursor: pointer;
+}
+
+.rule-3 button:hover {
+    background: var(--orange-rover);
+}
+
+.rule-3 .textResult {
+    color: var(--orange);
+}
+
+.modal-image {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-image img,
+.download-imovel-guide img {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    height: 100%;
+    width: 100%;
+}
+
+.modal-image button {
+    border: none;
+    border-radius: 5px;
+    padding: .5rem .5rem;
+    background-color: var(--orange);
+    color: var(--white);
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.modal-image button:hover {
+    background: var(--orange-rover);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 80px;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+}
+
+#modalImage {
+    border-radius: 4px;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: red;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.download-imovel-guide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.download-imovel-guide button {
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    padding: .5rem .5rem;
+    background-color: var(--orange);
+    color: var(--white);
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.download-imovel-guide a {
+    margin-bottom: 1rem;
+}
+
+.download-imovel-guide #download {
+    cursor: pointer;
+}
+
+.download-imovel-guide #detail {
+    position: absolute;
+    top: 950px;
+    width: 12%;
+    background-color: rgba(230, 84, 0, 0.788);
+}
+
+.download-imovel-guide button:hover {
+    background: var(--orange-rover);
+}
+
+.image-effect {
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 330px;
+}
+
+.image-effect img {
+    animation-name: zoom;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    height: 100%;
+    border-radius: 8px;
+}
+
+footer {
+    padding: 1rem 5.625rem;
+}
+
+footer nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .nav-one ul {
+    display: flex;
+}
+
+footer .nav-one li {
+    list-style: none;
+    margin-right: 1rem;
+}
+footer .nav-one li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+}
+footer .nav-one ul {
+    display: flex;
+}
+footer .nav-one ul {
+    display: flex;
+}
+
+footer .nav-two {
+    display: flex;
+    color: var(--white);
+    align-items: center;
+}
+
+footer .nav-two span {
+    font-size: 1.2rem;
+    margin-right: 8rem;
+    font-weight: 500;
+}
+
+footer .nav-two img {
+    height: 3.125rem;
+    width: 6.25rem;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .menu-hamburguer {
+        width: 32px;
+        cursor: pointer;
+    }
+    
+    .menu-hamburguer span {
+        height: 2px;
+        width: 100%;
+        background-color: white;
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    header {
+        padding: 1rem 2rem;
+        background-color: #1B2653;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header nav,
+    header .nav-one ul,
+    header .nav-two,
+    header .nav-two ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .nav-two {
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    header .nav-two button {
+        margin: 1rem 0 0;
+    }
+
+    header nav {
+        position: absolute;
+        top: 110px;
+        right: 0;
+        align-items: center;
+        padding: 1rem 1rem;
+        background-color: grey;
+        width: 14rem;
+        z-index: 3;
+    }
+
+    header img {
+        width: 5rem;
+    }
+
+    main {
+        padding: 4rem 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 46.5%);
+        gap: 3rem;
+    }
+
+    .brokers {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        border: 1px solid black;
+        padding: .5rem .5rem;
+        border-radius: 4px;
+    }
+
+    .broker {
+        display: flex;
+        align-items: center;
+    }
+
+    .broker img {
+        width: 7.813rem;
+        height: 8.313rem;
+        border-radius: 8px;
+        margin-right: .5rem;
+    }
+
+    .broker h2 {
+        font-size: 1.25rem;
+        color: var(--blue);
+        font-weight: 500;
+    }
+
+    .broker p {
+        color: var(--blue);
+    }
+
+    .broker button {
+        color: var(--orange);
+        text-decoration: dashed;
+        border: none;
+        border-bottom: 1px solid var(--orange);
+        font-size: 1rem;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .broker button:hover {
+        color: var(--orange-rover);
+    }
+
+    .send-message {
+        padding: 1rem 1rem;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
+
+    .send-message h1 {
+        color: var(--blue);
+        font-size: 1.25rem;
+        margin-bottom: 1.25rem;
+        font-weight: 500;
+        margin-top: 0;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    form input {
+        height: 2rem;
+        padding: 0 .25rem;
+        border-radius: 6px;
+        border: 1px solid black;
+    }
+
+    form textarea {
+        height: 4rem;
+        padding: .25rem .25rem;
+        border-radius: 6px;
+        border: 1px solid black;
+    }
+
+    form input:focus {
+        outline: 2px solid var(--orange);
+        border: none;
+    }
+
+    form textarea:focus {
+        outline: 2px solid var(--orange);
+        border: none;
+    }
+
+    form button {
+        width: 9rem;
+        border: none;
+        border-radius: 6px;
+        padding: .25rem .5rem;
+        background-color: var(--orange);
+        color: var(--white);
+        font-weight: 400;
+        font-size: 1rem;
+    }
+    
+    .rule-3 {
+        padding: 1rem 1rem;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
+
+    .rule-3 h1 {
+        font-size: 1.25rem;
+        color: var(--blue);
+        font-weight: 500;
+        margin-bottom: 3rem;
+        margin-top: 0;
+    }
+
+    .rule-3 input {
+        height: 2rem;
+        padding: 0 .25rem;
+        border-radius: 6px;
+        border: 1px solid black;
+    }
+
+    .rule-3 input:focus {
+        outline: 2px solid var(--orange);
+        border: none;
+    }
+
+    .calculate {
+        display: grid;
+        grid-template-columns: 40% 10% 40%;
+        column-gap: 5%;
+        row-gap: 1rem;
+        align-items: center;
+    }
+
+    .calculate span {
+        border: 1px solid black;
+    }
+
+    .rule-3 button {
+        margin-top: 4.375rem;
+        width: 6.25rem;
+        height: 1.5rem;
+        padding: 0 1rem;
+        border: none;
+        background: var(--orange);
+        color: var(--white);
+        border-radius: 6px;
+        font-size: 1rem;
+    }
+
+    .modal-image {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-image img,
+    .download-imovel-guide img {
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .modal-image button {
+        height: 2rem;
+        border: none;
+        border-radius: 8px;
+        background: var(--orange);
+        color: var(--white);
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .download-imovel-guide {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .download-imovel-guide button {
+        width: 12.5rem;
+        margin: 0 auto;
+        height: 2rem;
+        background: var(--orange);
+        color: var(--white);
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .image-effect {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-effect img {
+        border-radius: 8px;
+    }
+
+    footer {
+        padding: 2rem 0;
+    }
+
+    footer nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer .nav-one {
+        display: none;
+    }
+
+    footer .nav-two {
+        display: flex;
+        color: var(--white);
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    footer .nav-two span {
+        font-size: 1.2rem;
+        margin-right: 1rem;
+        font-weight: 500;
+    }
+
+    footer .nav-two img {
+        height: 3.125rem;
+        width: 6.25rem;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    .menu-hamburguer {
+        width: 32px;
+        cursor: pointer;
+    }
+    
+    .menu-hamburguer span {
+        height: 2px;
+        width: 100%;
+        background-color: white;
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    header {
+        padding: 1rem 2rem;
+        background-color: #1B2653;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header nav,
+    header .nav-one ul,
+    header .nav-two,
+    header .nav-two ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .nav-two {
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    header .nav-two button {
+        margin: 1rem 0 0;
+    }
+
+    header nav {
+        position: absolute;
+        top: 110px;
+        right: 0;
+        align-items: center;
+        padding: 1rem 1rem;
+        background-color: grey;
+        width: 14rem;
+        z-index: 3;
+    }
+
+    header img {
+        width: 5rem;
+    }
+
+    main {
+        padding: 5rem 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 46.5%);
+        gap: 3rem;
+    }
+
+    .brokers {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        border: 1px solid black;
+        padding: .5rem .5rem;
+        border-radius: 4px;
+    }
+
+    .broker {
+        display: flex;
+        align-items: center;
+    }
+
+    #imageBack {
+        width: 13rem;
+        height: 11rem;
+        filter: blur(2px);
+        z-index: 1;
+    }
+    
+    #imageFront {
+        background-size: 1rem 100rem;
+        position: relative;
+        left: -8rem;
+        width: 8rem;
+        z-index: 2;
+    }
+
+    .broker img {
+        max-width: 7.813rem;
+        height: 8.313rem;
+        border-radius: 8px;
+        margin-right: .5rem;
+    }
+
+    .broker h2 {
+        font-size: 1.25rem;
+        color: var(--blue);
+        font-weight: 500;
+    }
+
+    .broker p {
+        color: var(--blue);
+    }
+
+    .broker button {
+        color: var(--orange);
+        text-decoration: dashed;
+        border: none;
+        border-bottom: 1px solid var(--orange);
+        font-size: 1rem;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .broker button:hover {
+        color: var(--orange-rover);
+    }
+
+    .send-message {
+        padding: 1rem 1rem;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
+
+    .send-message h1 {
+        color: var(--blue);
+        font-size: 1.25rem;
+        margin-bottom: 1.25rem;
+        font-weight: 500;
+        margin-top: 0;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    form input {
+        height: 2rem;
+        padding: 0 .25rem;
+        border-radius: 6px;
+        border: 1px solid black;
+    }
+
+    form textarea {
+        height: 4rem;
+        padding: .25rem .25rem;
+        border-radius: 6px;
+        border: 1px solid black;
+    }
+
+    form input:focus {
+        outline: 2px solid var(--orange);
+        border: none;
+    }
+
+    form textarea:focus {
+        outline: 2px solid var(--orange);
+        border: none;
+    }
+
+    form button {
+        width: 9rem;
+        border: none;
+        border-radius: 6px;
+        padding: .25rem .5rem;
+        background-color: var(--orange);
+        color: var(--white);
+        font-weight: 400;
+        font-size: .9rem;
+    }
+    
+    .rule-3 {
+        padding: 1rem 1rem;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
+
+    .rule-3 h1 {
+        font-size: 1.25rem;
+        color: var(--blue);
+        font-weight: 500;
+        margin-bottom: 3rem;
+        margin-top: 0;
+    }
+
+    .rule-3 input {
+        height: 2rem;
+        padding: 0 .25rem;
+        border-radius: 6px;
+        border: 1px solid black;
+    }
+
+    .rule-3 input:focus {
+        outline: 2px solid var(--orange);
+        border: none;
+    }
+
+    .calculate {
+        display: grid;
+        grid-template-columns: 40% 10% 40%;
+        column-gap: 5%;
+        row-gap: 1rem;
+        align-items: center;
+    }
+
+    .calculate span {
+        border: 1px solid black;
+    }
+
+    .rule-3 button {
+        margin-top: 4.375rem;
+        width: 6.25rem;
+        height: 1.5rem;
+        padding: 0 1rem;
+        border: none;
+        background: var(--orange);
+        color: var(--white);
+        border-radius: 6px;
+        font-size: .9rem;
+    }
+
+    .modal-image {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-image img {
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .modal-image button {
+        height: 2rem;
+        margin: 0;
+        padding: 0 1rem;
+        border: none;
+        border-radius: 8px;
+        background: var(--orange);
+        color: var(--white);
+        font-size: .9rem;
+    }
+
+    .download-imovel-guide {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .download-imovel-guide img {
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        height: 100%;
+    }
+
+    .download-imovel-guide button {
+        width: 12.5rem;
+        padding: 0 1rem;
+        height: 2rem;
+        background: var(--orange);
+        color: var(--white);
+        border: none;
+        border-radius: 8px;
+        font-size: .9rem;
+    }
+
+    .image-effect {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-effect img {
+        border-radius: 8px;
+    }
+
+    footer {
+        padding: 1rem 0;
+    }
+
+    footer nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer .nav-one {
+        display: none;
+    }
+
+    footer .nav-two {
+        display: flex;
+        color: var(--white);
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    footer .nav-two span {
+        font-size: 1.2rem;
+        margin-right: 1rem;
+        font-weight: 500;
+    }
+
+    footer .nav-two img {
+        height: 3.125rem;
+        width: 6.25rem;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 599px) {
+    .menu-hamburguer {
+        width: 32px;
+        cursor: pointer;
+    }
+    
+    .menu-hamburguer span {
+        height: 2px;
+        width: 100%;
+        background-color: white;
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    header {
+        padding: 1rem 2rem;
+        background-color: #1B2653;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header nav,
+    header .nav-one ul,
+    header .nav-two,
+    header .nav-two ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .nav-two {
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    header .nav-two button {
+        margin: 1rem 0 0;
+    }
+
+    header nav {
+        position: absolute;
+        top: 110px;
+        right: 0;
+        align-items: center;
+        padding: 1rem 1rem;
+        background-color: grey;
+        width: 14rem;
+        z-index: 3;
+    }
+
+    header img {
+        width: 5rem;
+    }
+
+    main {
+        padding: 2rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .brokers {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        border: 1px solid black;
+        padding: .5rem .5rem;
+        border-radius: 4px;
+        max-width: 330px;
+        width: 100%;
+    }
+
+    .broker {
+        display: flex;
+        align-items: center;
+    }
+
+    .broker img {
+        width: 7.813rem;
+        height: 8.313rem;
+        border-radius: 8px;
+        margin-right: .5rem;
+    }
+
+    .broker h2 {
+        font-size: 1.25rem;
+        color: var(--blue);
+        font-weight: 500;
+    }
+
+    .broker p {
+        color: var(--blue);
+    }
+
+    .broker button {
+        color: var(--orange);
+        text-decoration: dashed;
+        border: none;
+        border-bottom: 1px solid var(--orange);
+        font-size: 1rem;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .broker button:hover {
+        color: var(--orange-rover);
+    }
+
+    .send-message {
+        padding: 1rem 1rem;
+        border: 1px solid black;
+        border-radius: 4px;
+        max-width: 330px;
+        width: 100%;
+    }
+
+    .send-message h1 {
+        color: var(--blue);
+        font-size: 1.25rem;
+        margin-bottom: 1.25rem;
+        font-weight: 500;
+        margin-top: 0;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    form input {
+        height: 2rem;
+        padding: 0 .25rem;
+        border-radius: 6px;
+        border: 1px solid black;
+    }
+
+    form textarea {
+        height: 4rem;
+        padding: .25rem .25rem;
+        border-radius: 6px;
+        border: 1px solid black;
+    }
+
+    form input:focus {
+        outline: 2px solid var(--orange);
+        border: none;
+    }
+
+    form textarea:focus {
+        outline: 2px solid var(--orange);
+        border: none;
+    }
+
+    form button {
+        width: 8.125rem;
+        border: none;
+        border-radius: 6px;
+        padding: .3rem .5rem;
+        background-color: var(--orange);
+        color: var(--white);
+        font-weight: 400;
+        font-size: .8rem;
+    }
+    
+    .rule-3 {
+        padding: 1rem 1rem;
+        border: 1px solid black;
+        border-radius: 4px;
+        max-width: 330px;
+        width: 100%;
+    }
+
+    .rule-3 h1 {
+        font-size: 1.25rem;
+        color: var(--blue);
+        font-weight: 500;
+        margin-bottom: 3rem;
+        margin-top: 0;
+    }
+
+    .rule-3 input {
+        height: 2rem;
+        padding: 0 .25rem;
+        border-radius: 6px;
+        border: 1px solid black;
+    }
+
+    .rule-3 input:focus {
+        outline: 2px solid var(--orange);
+        border: none;
+    }
+
+    .calculate {
+        display: grid;
+        grid-template-columns: 40% 10% 40%;
+        column-gap: 5%;
+        row-gap: 1rem;
+        align-items: center;
+    }
+
+    .calculate span {
+        border: 1px solid black;
+    }
+
+    .rule-3 button {
+        margin-top: 4.375rem;
+        width: 6.25rem;
+        height: 1.5rem;
+        border: none;
+        background: var(--orange);
+        color: var(--white);
+        border-radius: 6px;
+        font-size: .8rem;
+    }
+
+    .modal-image {
+        display: flex;
+        flex-direction: column;
+        max-width: 330px;
+        width: 100%;
+    }
+
+    .modal-image img,
+    .download-imovel-guide img {
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .modal-image button {
+        height: 2rem;
+        border: none;
+        border-radius: 8px;
+        background: var(--orange);
+        color: var(--white);
+        font-size: .8rem;
+    }
+
+    .download-imovel-guide {
+        display: flex;
+        flex-direction: column;
+        max-width: 330px;
+        width: 100%;
+    }
+
+    .download-imovel-guide button {
+        width: 12.5rem;
+        margin: 0 auto;
+        height: 2rem;
+        background: var(--orange);
+        color: var(--white);
+        border: none;
+        border-radius: 8px;
+        font-size: .8rem;
+    }
+
+    .image-effect {
+        display: flex;
+        flex-direction: column;
+        max-width: 330px;
+        width: 100%;
+    }
+
+    .image-effect img {
+        border-radius: 8px;
+    }
+
+    footer {
+        padding: 1rem 0;
+    }
+
+    footer nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer .nav-one {
+        display: none;
+    }
+
+    footer .nav-two {
+        display: flex;
+        color: var(--white);
+        align-items: center;
+    }
+
+    footer .nav-two span {
+        font-size: 0.625rem;
+        margin-right: 1rem;
+        font-weight: 500;
+    }
+
+    footer .nav-two img {
+        height: 3.125rem;
+        width: 6.25rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .menu-hamburguer {
+        width: 32px;
+        cursor: pointer;
+    }
+    
+    .menu-hamburguer span {
+        height: 2px;
+        width: 100%;
+        background-color: white;
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    header {
+        padding: 1rem 2rem;
+        background-color: #1B2653;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header nav,
+    header .nav-one ul,
+    header .nav-two,
+    header .nav-two ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .nav-two {
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    header .nav-two button {
+        margin: 1rem 0 0;
+    }
+
+    header nav {
+        position: absolute;
+        top: 110px;
+        right: 0;
+        align-items: center;
+        padding: 1rem 1rem;
+        background-color: grey;
+        width: 14rem;
+        z-index: 3;
+    }
+
+    header img {
+        width: 5rem;
+    }
+
+    main {
+        padding: 2rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .brokers {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        border: 1px solid black;
+        padding: .5rem .5rem;
+        border-radius: 4px;
+    }
+
+    .broker {
+        display: flex;
+        align-items: center;
+    }
+
+    #imageBack {
+        width: 10rem;
+        height: 11rem;
+        filter: blur(2px);
+        z-index: 1;
+    }
+    
+    #imageFront {
+        background-size: 1rem 100rem;
+        position: relative;
+        left: -9.5rem;
+        width: 8rem;
+        z-index: 2;
+    }
+
+    .broker h2 {
+        font-size: 1.25rem;
+        color: var(--blue);
+        font-weight: 500;
+    }
+
+    .broker p {
+        color: var(--blue);
+    }
+
+    .broker button {
+        color: var(--orange);
+        text-decoration: dashed;
+        border: none;
+        border-bottom: 1px solid var(--orange);
+        font-size: 1rem;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .broker button:hover {
+        color: var(--orange-rover);
+    }
+
+    .send-message {
+        padding: 1rem 1rem;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
+
+    .send-message h1 {
+        color: var(--blue);
+        font-size: 1.25rem;
+        margin-bottom: 1.25rem;
+        margin-top: 0;
+        font-weight: 500;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    form input {
+        height: 2rem;
+        padding: 0 .25rem;
+        border-radius: 6px;
+        border: 1px solid black;
+    }
+
+    form textarea {
+        height: 4rem;
+        padding: .25rem .25rem;
+        border-radius: 6px;
+        border: 1px solid black;
+    }
+
+    form input:focus {
+        outline: 2px solid var(--orange);
+        border: none;
+    }
+
+    form textarea:focus {
+        outline: 2px solid var(--orange);
+        border: none;
+    }
+
+    form button {
+        width: 8.125rem;
+        border: none;
+        border-radius: 6px;
+        padding: .25rem .5rem;
+        background-color: var(--orange);
+        color: var(--white);
+        font-weight: 400;
+        font-size: .8rem;
+    }
+    
+    .rule-3 {
+        padding: 1rem 1rem;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
+
+    .rule-3 h1 {
+        margin-top: 0;
+        font-size: 1.25rem;
+        color: var(--blue);
+        font-weight: 500;
+        margin-bottom: 3rem;
+    }
+
+    .rule-3 input {
+        height: 2rem;
+        padding: 0 .25rem;
+        border-radius: 6px;
+        border: 1px solid black;
+    }
+
+    .rule-3 input:focus {
+        outline: 2px solid var(--orange);
+        border: none;
+    }
+
+    .calculate {
+        display: grid;
+        grid-template-columns: 40% 10% 40%;
+        column-gap: 5%;
+        row-gap: 1rem;
+        align-items: center;
+    }
+
+    .calculate span {
+        border: 1px solid black;
+    }
+
+    .rule-3 button {
+        margin-top: 4.375rem;
+        width: 6.25rem;
+        height: 1.5rem;
+        border: none;
+        background: var(--orange);
+        color: var(--white);
+        border-radius: 6px;
+        font-size: .8rem;
+    }
+
+    .modal-image {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-image img,
+    .download-imovel-guide img {
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .modal-image button {
+        height: 2rem;
+        border: none;
+        border-radius: 8px;
+        background: var(--orange);
+        color: var(--white);
+        font-size: .8rem;
+    }
+
+    .download-imovel-guide {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .download-imovel-guide button {
+        width: 12.5rem;
+        margin: 0 auto;
+        height: 2rem;
+        background: var(--orange);
+        color: var(--white);
+        border: none;
+        border-radius: 8px;
+        font-size: .8rem;
+    }
+
+    .image-effect {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-effect img {
+        border-radius: 8px;
+    }
+
+    footer {
+        padding: 1rem 0;
+    }
+
+    footer nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer .nav-one {
+        display: none;
+    }
+
+    footer .nav-two {
+        display: flex;
+        color: var(--white);
+        align-items: center;
+    }
+
+    footer .nav-two span {
+        font-size: 0.625rem;
+        margin-right: 1rem;
+        font-weight: 500;
+    }
+
+    footer .nav-two img {
+        height: 3.125rem;
+        width: 6.25rem;
+    }
+}
